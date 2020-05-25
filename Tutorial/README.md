@@ -17,9 +17,9 @@ Go to the [NCBI Blast page](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select
 
 Paste the sequence in the "Enter Query Sequence" imput box and choose the "Nucleotide collection (nr/nt)" datasbase to query. Run the algorithm to identify "Highly similar sequences (megablast)".
 
-** Q1: Look at the results. What can we say about the sequence? What type of organism is it? **
+**Q1: Look at the results. What can we say about the sequence? What type of organism is it?**
 
-** Q2: What is a phage? What kind of organism does it infects? **
+**Q2: What is a phage? What kind of organism does it infects?**
 
 Ressources: [MicrobeWiki](https://microbewiki.kenyon.edu/index.php/MicrobeWiki)
 
@@ -27,7 +27,7 @@ Ressources: [MicrobeWiki](https://microbewiki.kenyon.edu/index.php/MicrobeWiki)
 
 Next we want to get an idea of what information we can retrieve on the functions carried in this DNA sequence. 
 
-** Q3: What is a gene? How can we identify a gene in a DNA sequence? **
+**Q3: What is a gene? How can we identify a gene in a DNA sequence?**
 
 ### Heuristic ORF finder
 
@@ -35,7 +35,7 @@ To retrieve the ORFs from our sequence, we'll use the heuristic [GeneMark](http:
 
 Paste the sequence in the input box. Select "Protein sequence" as output. Leave the other parameters as default. Run GeneMark and open the protein sequence output.
 
-** Q4: How many ORFs did the algoritm identify in our sequence? **
+**Q4: How many ORFs did the algoritm identify in our sequence?**
 
 ## BlastP
 
@@ -45,11 +45,11 @@ Paste our protein sequences (unknown_proteins.fasta) in the input query box, and
 
 Browse the results for each of the putative proteins.
 
-** Q5: What type of functions did we identify? Is it surprising? **
+**Q5: What type of functions did we identify? Is it surprising?**
 
 Let's look closely at the protein nb4 'gene_4|GeneMark.hmm|341_aa|+|9466|10491'. Select the Top 10 hits for this protein and look at the result as a "Distance tree".
 
-** Q6: In what type of organism do we find this protein? What do you think happened here?**
+**Q6: In what type of organism do we find this protein? What do you think happened here?**
 
 ## Where can we find it ?
 
@@ -57,7 +57,7 @@ Finally, we want to explore the distribution and abundance of this gene in ecosy
 
 Using the 'gene_4|GeneMark.hmm|341_aa|+|9466|10491' as input, query the "OM-RGCv1 - Tara Ocean Microbiome" database. Set the "Expect threshold" to 1e-200.
 
-** Q7: Where this gene can be found in the ocean? Rather at the surface or deep in the sea ? Does that make sense from what we know about this gene ?**
+**Q7: Where this gene can be found in the ocean? Rather at the surface or deep in the sea ? Does that make sense from what we know about this gene ?**
 
 
 

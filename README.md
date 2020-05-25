@@ -13,5 +13,5 @@ The hands-on part of the workshop gives an introduction to:
 
 	- BlastN and BlastP
 	- heuristic ORF finder
-	- Research and download from the Entrez portal
+	- Research and download from the NCBI Entrez portal
 	- The Ocean Gene Catalogue
