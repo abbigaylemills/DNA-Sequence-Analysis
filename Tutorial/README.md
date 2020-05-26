@@ -1,63 +1,67 @@
 # What can we learn from a DNA sequence?
-During our last metagenomic sequencing expedition in the Pacific Ocean, we retrieved an unknown sequence (contig_unknown.fasta).
 
-What can we learn from this unknown DNA sequence?
+**Overview of the hands-on exercise**
 
-## Who is there?
+This hands-on workshop focuses on an unknown DNA sequence collected in a surface seawater metagenomic sample. The sequence is available in contig_unknown.fasta file.
+
+**Discussion: What can we learn from an unknown DNA sequence?**
+
+## 1- What kind of organism this sequence belongs to?
 The first question that comes in mind when dealing with an unknown sequence is trying to identify the "who"?
 
-Along the years, scientists have collected a large collection of genomes from a broad number of organisms. 
-One of these database is maintained by the National Center for Biotechnology Information (NCBI), and is called GenBank. 
-Ressource: [GenBank](https://www.ncbi.nlm.nih.gov/genbank/)
+### 1.A Run a BlastN query against the NCBI GenBank database
 
-We first want to compare our sequence to this large ressource. To do so, we will use a very very (very) famous algorithm: Blast.
+Step1: Go to the [NCBI Blast page](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the Nucleotide Blast tool.
 
-### BlastN query
-Go to the [NCBI Blast page](https://blast.ncbi.nlm.nih.gov/Blast.cgi) and select the Nucleotide Blast tool.
+Step2: Paste the sequence in the "Enter Query Sequence" imput box and choose the "Nucleotide collection (nr/nt)" datasbase to query. 
 
-Paste the sequence in the "Enter Query Sequence" imput box and choose the "Nucleotide collection (nr/nt)" datasbase to query. Run the algorithm to identify "Highly similar sequences (megablast)".
+Step3: Run the algorithm to identify "Highly similar sequences (megablast)".
 
-**Q1: Look at the results. What can we say about the sequence? What type of organism is it?**
+**Discussion: Look at the results. What can we say about the sequence? What type of organism is it?**
 
-**Q2: What is a phage? What kind of organism does it infects?**
+**To go further: What is a phage? What kind of organism does it infects?**
 
-Ressources: [MicrobeWiki](https://microbewiki.kenyon.edu/index.php/MicrobeWiki)
-
-## What is it doing ?
+## 2- What biological functions does this sequence encode ?
 
 Next we want to get an idea of what information we can retrieve on the functions carried in this DNA sequence. 
 
-**Q3: What is a gene? How can we identify a gene in a DNA sequence?**
+**Discussion: What is a gene? How can we identify a gene in a DNA sequence?**
 
-### Heuristic ORF finder
+### 2.A Unsing GeneMark to identify ORFs
 
-To retrieve the ORFs from our sequence, we'll use the heuristic [GeneMark](http://opal.biology.gatech.edu/GeneMark/heuristic_gmhmmp.cgi).
+Step1: To retrieve the ORFs from our sequence, we'll use the heuristic [GeneMark](http://opal.biology.gatech.edu/GeneMark/heuristic_gmhmmp.cgi).
 
-Paste the sequence in the input box. Select "Protein sequence" as output. Leave the other parameters as default. Run GeneMark and open the protein sequence output.
+Step2: Paste the sequence in the input box. Select "Protein sequence" as output. Leave the other parameters as default. 
 
-**Q4: How many ORFs did the algoritm identify in our sequence?**
+Step3: Run GeneMark and open the protein sequence output.
 
-## BlastP
+**Discussion: How many ORFs did the algoritm identify in our sequence?**
 
-In order to get a clue about the functions of these proteins, we can use [BlastP](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE=Proteins) against the NCBI protein database.
+## 2.B Explore putative protein functions with BlastP
 
-Paste our protein sequences (unknown_proteins.fasta) in the input query box, and choose to run BlastP against the "Reference proteins (RefSeq_protein)" database. Leave the other parameters as default and run BlastP.
+Step1: Go to [BlastP](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE=Proteins) at NCBI.
 
-Browse the results for each of the putative proteins.
+Step2: Paste our protein sequences (sequence available in unknown_proteins.fasta file) in the input query box, and choose to run BlastP against the "Reference proteins (RefSeq_protein)" database. Leave the other parameters as default
 
-**Q5: What type of functions did we identify? Is it surprising?**
+Step3: Browse the results for each of the putative proteins.
 
-Let's look closely at the protein nb4 'gene_4|GeneMark.hmm|341_aa|+|9466|10491'. Select the Top 10 hits for this protein and look at the result as a "Distance tree".
+**Discussion: What type of functions did we identify? Is it surprising?**
 
-**Q6: In what type of organism do we find this protein? What do you think happened here?**
+Step4: Let's look closely at the protein identified by GenMark called 'gene_4'. 
 
-## Where can we find it ?
+Step5: Select the Top 10 hits for this protein and look at the result as a "Distance tree".
 
-Finally, we want to explore the distribution and abundance of this gene in ecosystems. To do so we'll use the [Ocean Gene Atlas](http://tara-oceans.mio.osupytheas.fr/ocean-gene-atlas/).
+**Discussion: In what type of organism do we find this protein? What do you think happened here?**
 
-Using the 'gene_4|GeneMark.hmm|341_aa|+|9466|10491' as input, query the "OM-RGCv1 - Tara Ocean Microbiome" database. Set the "Expect threshold" to 1e-200.
+## 3. Where can we find this sequence in ecosystems ?
 
-**Q7: Where this gene can be found in the ocean? Rather at the surface or deep in the sea ? Does that make sense from what we know about this gene ?**
+Step 1: Finally, we want to explore the distribution and abundance of this gene in ecosystems. Go to the [Ocean Gene Atlas](http://tara-oceans.mio.osupytheas.fr/ocean-gene-atlas/) webpage.
+
+Step 2: Using the 'gene_4|GeneMark.hmm|341_aa|+|9466|10491' as input, query the "OM-RGCv1 - Tara Ocean Microbiome" database. 
+
+Step3: Set the "Expect threshold" to 1e-200.
+
+**Discussion: Where this gene can be found in the ocean? Rather at the surface or deep in the sea ? Does that make sense from what we know about this gene ?**
 
 
 
